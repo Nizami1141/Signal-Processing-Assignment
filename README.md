@@ -1,18 +1,49 @@
-Signal Processing 
-Assignment 2 
-1. Generate two random signals with low frequency content (less than 1rad/sec) and call 
-them 𝑥1 and 𝑥2 in Python by using numpy library. Plot them. (Take your time array from 
-−50 𝑡𝑜 50 with 0.01 increments). 
-2. Modulate 𝑥1 with cos (10𝑡) and 𝑥2 with cos (20𝑡). Plot the modulated signals 
-(𝑥1𝑚 and 𝑥2𝑚). 
-3. Add two modulated signals and store it as 𝑥. Plot 𝑥. 
-4. Now Bandpass filter 𝑥 to extract 𝑥1𝑚. Store it as 𝑥1𝑚−𝑒𝑥𝑡𝑟𝑎𝑐𝑡𝑒𝑑. Then repeat to get 
-�
-�2𝑚_𝑒𝑥𝑡𝑟𝑎𝑐𝑡𝑒𝑑. (Note: for convolution you can use np.convolve(x, y) from numpy library) 
-5. Now to reconstruct the original signals 𝑥1 and 𝑥2, multiply 𝑥1𝑚_𝑒𝑥𝑡𝑟𝑎𝑐𝑡𝑒𝑑 with cos (10𝑡) 
-and low-pass filter to get 𝑥1_𝑟𝑒𝑐𝑜𝑛𝑠𝑡𝑟𝑢𝑐𝑡𝑒𝑑. Then repeat steps to get 𝑥2_𝑟𝑒𝑐𝑜𝑛𝑠𝑡𝑟𝑢𝑐𝑡𝑒𝑑.  
-6. Plot on one same figure 𝑥1 and 𝑥1_𝑟𝑒𝑐𝑜𝑛𝑠𝑡𝑟𝑢𝑐𝑡𝑒𝑑. Then plot on one same figure 𝑥2 and 
-�
-�2_𝑟𝑒𝑐𝑜𝑛𝑠𝑡𝑟𝑢𝑐𝑡𝑒𝑑.  
-Include all the plots with their name, original functions 𝒙𝟏 and 𝒙𝟐, and your full 
-Python code in the submission.
+# Signal Processing - Assignment 2
+
+This repository contains the solution for Signal Processing Assignment 2. The objective of this assignment is to perform signal modulation, filtering, and reconstruction using Python. 
+
+## Assignment Tasks
+
+1. **Generate Signals:**
+   - Create two random signals, `x1` and `x2`, with low-frequency content (<1 rad/sec) using the `numpy` library.
+   - Define the time array ranging from -50 to 50 with 0.01 increments.
+   - Plot the generated signals.
+
+2. **Signal Modulation:**
+   - Modulate `x1` with `cos(10t)` and `x2` with `cos(20t)` to produce `x1m` and `x2m`.
+   - Plot the modulated signals.
+
+3. **Signal Addition:**
+   - Add the two modulated signals (`x1m` and `x2m`) to create a combined signal `x`.
+   - Plot the combined signal.
+
+4. **Bandpass Filtering:**
+   - Extract `x1m` from `x` using a bandpass filter, store it as `x1m_extracted`.
+   - Repeat the process for `x2m` to get `x2m_extracted`.
+   - Use `np.convolve()` for convolution.
+
+5. **Signal Reconstruction:**
+   - Reconstruct the original signals (`x1` and `x2`) by:
+     - Multiplying `x1m_extracted` with `cos(10t)` and applying a low-pass filter to get `x1_reconstructed`.
+     - Repeating the same steps for `x2m_extracted` to obtain `x2_reconstructed`.
+
+6. **Visualization:**
+   - Plot `x1` and `x1_reconstructed` on the same figure.
+   - Plot `x2` and `x2_reconstructed` on the same figure.
+
+## Repository Contents
+
+- **`assignment_solution.py`**: The Python script containing the implementation for all the tasks listed above.
+- **Plots**: Visualizations generated during the process.
+- **README.md**: This file.
+
+## Requirements
+
+The following Python libraries are required to run the script:
+- `numpy`
+- `matplotlib`
+
+You can install the required libraries using pip:
+
+```bash
+pip install numpy matplotlib
